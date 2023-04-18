@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Egg Gui By Skeletonman#2000", "DarkTheme")
+local Window = Library.CreateLib("Egg Gui By .23.34/3#9801", "DarkTheme")
 
 local Main = Window:NewTab("Basic")
 local Section = Main:NewSection("Main")
@@ -2429,4 +2429,4 @@ local Info = Window:NewTab("Some Info")
 local InfoSection = Info:NewSection("Info")
 
 InfoSection:NewLabel("If you have any questions here you go my Discord")
-InfoSection:NewLabel("Skeletonman#2000")
+InfoSection:NewLabel(".23.34/3#9801")
