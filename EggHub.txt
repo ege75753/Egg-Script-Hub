@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Egg Gui By .23.34/3#9801", "DarkTheme")
+local Window = Library.CreateLib("Egg Gui By Skeletonman#9534", "DarkTheme")
 
 local Main = Window:NewTab("Basic")
 local Section = Main:NewSection("Main")
@@ -234,11 +234,11 @@ end)
 local Backdoor = Window:NewTab("Backdoor")
 local BackdoorSection = Backdoor:NewSection("Backdoor")
 
-BackdoorSection:NewButton("Backdoor.exe", "Check backdoors and lets u use require scripts. aka backdoor.exe", function()
+BackdoorSection:NewButton("Backdoor.exe (op)", "Check backdoors and lets u use require scripts, function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
 end)
 
-BackdoorSection:NewButton("FraktureSS", "Check backdoors and lets u use require scripts. aka FraktureSS", function()
+BackdoorSection:NewButton("FraktureSS (op)", "Check backdoors and lets u use require scripts", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/L1ghtingBolt/FraktureSS/master/unobfuscated.lua"))()
 end)
 
@@ -2429,4 +2429,4 @@ local Info = Window:NewTab("Some Info")
 local InfoSection = Info:NewSection("Info")
 
 InfoSection:NewLabel("If you have any questions here you go my Discord")
-InfoSection:NewLabel(".23.34/3#9801")
+InfoSection:NewLabel("Skeletonman#9534")
