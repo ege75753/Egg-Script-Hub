@@ -1,3 +1,21 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Executed!", 
+	Text = "by Skeletonman#9534",
+	Icon = "" 
+})
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Check", 
+	Text = "Checking if script is functioning",
+	Icon = "" 
+})
+wait(2)
+print("is running?")
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Done!", 
+	Text = "Have fun!",
+	Icon = "" 
+})
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Egg Gui By Skeletonman#9534", "DarkTheme")
 
