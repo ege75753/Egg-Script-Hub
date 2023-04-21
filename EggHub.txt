@@ -43,7 +43,7 @@ local Indicator
 
 if not StealthMode then
     local ScreenGui = Instance.new("ScreenGui", game.CoreGui)
-    print("NOCLIP: Press E to Activate")
+    print("NOCLIP: Press P to Activate")
     Indicator = Instance.new("TextLabel", ScreenGui)
     Indicator.AnchorPoint = Vector2.new(0, 1)
     Indicator.Position = UDim2.new(0, 0, 1, 0)
@@ -2518,6 +2518,11 @@ UpdateLogTab:NewLabel("Backdoor added (op)")
 UpdateLogTab:NewLabel("New update logs section")
 UpdateLogTab:NewLabel("Added hitbox")
 UpdateLogTab:NewLabel("Added AutoClicker")
+UpdateLogTab:NewLabel("----------------------------------------")
+
+local QuickUpdateLog = UpdateLog:NewSection("Quick Updates")
+
+QuickUpdateLog:NewLabel("Improved Noclip p to open/close")
 
 local Info = Window:NewTab("Some Info")
 local InfoSection = Info:NewSection("Info")
