@@ -11,6 +11,12 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 wait(2)
 print("is running?")
 game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "New update", 
+	Text = "Make sure to check update logs! :D",
+	Icon = "" 
+})
+wait(0.5)
+game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Done!", 
 	Text = "Have fun!",
 	Icon = "" 
@@ -21,7 +27,6 @@ local Window = Library.CreateLib("Egg Gui By Skeletonman#9534", "DarkTheme")
 
 local Main = Window:NewTab("Basic")
 local Section = Main:NewSection("Main")
-
 
 Section:NewSlider("Speed", "Changes your speed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
@@ -249,6 +254,16 @@ Fly()
     
 end)
 
+Section:NewToggle("Super Human", "Makes u go fast and super high jumps", function(state)
+    if state then
+         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
+         game.Players.LocalPlayer.Character.Humanoid.JumpPower = 300
+    else
+         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+         game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+
 local Backdoor = Window:NewTab("Backdoor")
 local BackdoorSection = Backdoor:NewSection("Backdoor")
 
@@ -290,6 +305,55 @@ end)
 ScriptsSection:NewButton("Unnamed Esp", "op esp", function()
 	pcall(function() loadstring(game:HttpGet('https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua'))() end)
 end)
+
+local Hitbox = Window:NewTab("Hitbox")
+local HitboxTab = Hitbox:NewSection("Hitbox")
+
+HitboxTab:NewButton("Hitbox", "Enables Hitbox", function()
+	_G.HeadSize = 7
+	_G.Disabled = true
+
+	game:GetService('RunService').RenderStepped:connect(function()
+	if _G.Disabled then
+	for i,v in next, game:GetService('Players'):GetPlayers() do
+	if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+	pcall(function()
+	v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+	v.Character.HumanoidRootPart.Transparency = 0.3
+	v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really White")
+	v.Character.HumanoidRootPart.Material = "Glass"
+	v.Character.HumanoidRootPart.CanCollide = false
+	end)
+	end
+	end
+	end
+	end)
+end)
+
+local AutoClicker = Window:NewTab("Autoclicker")
+local AutoClickerTab = AutoClicker:NewSection("Autoclicker")
+
+AutoClickerTab:NewButton("AutoClicker", "Clicks at the speed of 0.01 secs", function()
+	local time = 0.01 --decrease if too slow increase if too fast
+
+	click = false
+	m = game.Players.LocalPlayer:GetMouse()
+	m.KeyDown:connect(function(key)
+	if key == "f" then
+	if click == true then click = false
+	elseif
+	click == false then click = true
+
+	while click == true do 
+	wait(time)
+	mouse1click()
+	end
+	end
+	end
+	end)
+end)
+
+AutoClickerTab:NewLabel("F to active F to close")
 
 ScriptsSection:NewButton("Ultimate Fling", "R15 R6 Best", function()
     local ultimateFling = Instance.new("ScreenGui")
@@ -2446,6 +2510,14 @@ socket5.Attachment1 = A1H
 -----------------------------------------------------------
 wait(9e9)
 end)
+
+local UpdateLog = Window:NewTab("Update Logs")
+local UpdateLogTab = UpdateLog:NewSection("Update logs")
+
+UpdateLogTab:NewLabel("Backdoor added (op)")
+UpdateLogTab:NewLabel("New update logs section")
+UpdateLogTab:NewLabel("Added hitbox")
+UpdateLogTab:NewLabel("Added AutoClicker")
 
 local Info = Window:NewTab("Some Info")
 local InfoSection = Info:NewSection("Info")
