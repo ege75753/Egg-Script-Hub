@@ -264,6 +264,10 @@ Section:NewToggle("Super Human", "Makes u go fast and super high jumps", functio
     end
 end)
 
+Section:NewKeybind("Toggle menu UI", "Changes the toggle", Enum.KeyCode.K, function()
+	Library:ToggleUI()
+end)
+
 local Backdoor = Window:NewTab("Backdoor")
 local BackdoorSection = Backdoor:NewSection("Backdoor")
 
@@ -319,7 +323,7 @@ HitboxTab:NewButton("Hitbox", "Enables Hitbox", function()
 	if v.Name ~= game:GetService('Players').LocalPlayer.Name then
 	pcall(function()
 	v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
-	v.Character.HumanoidRootPart.Transparency = 0.3
+	v.Character.HumanoidRootPart.Transparency = 0.5
 	v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really White")
 	v.Character.HumanoidRootPart.Material = "Glass"
 	v.Character.HumanoidRootPart.CanCollide = false
@@ -3013,6 +3017,18 @@ socket5.Attachment1 = A1H
 wait(9e9)
 end)
 
+local NewFeatures = Window:NewTab("New Features")
+local NewFeaturesTab = NewFeatures:NewSection("New Features")
+
+NewFeaturesTab:NewButton("Player Interact", "when u click on a player it interacts", function()
+    game:GetService("StarterGui"):SetCore("SetAvatarContextMenuEnabled", true)
+end)
+
+--always above
+NewFeaturesTab:NewLabel("so quick talk the library that i use")
+NewFeaturesTab:NewLabel("doesnt let me create one other tab")
+NewFeaturesTab:NewLabel("so new features goes to here")
+
 local UpdateLog = Window:NewTab("Update Logs")
 local UpdateLogTab = UpdateLog:NewSection("Update logs")
 
@@ -3022,6 +3038,8 @@ UpdateLogTab:NewLabel("Added AutoClicker")
 UpdateLogTab:NewLabel("Added Super Human")
 UpdateLogTab:NewLabel("Added Aimbot :O")
 UpdateLogTab:NewLabel("Added Esp :O")
+UpdateLogTab:NewLabel("Keybind to close the menu")
+UpdateLogTab:NewLabel("Added Player Interact")
 UpdateLogTab:NewLabel("----------------------------------------")
 
 local QuickUpdateLog = UpdateLog:NewSection("Quick Updates")
@@ -3031,15 +3049,4 @@ QuickUpdateLog:NewLabel("Improved Noclip p to open/close")
 local FutureUpdate = Window:NewTab("Future Updates")
 local FutureUpdateTab = FutureUpdate:NewSection("Future Updates")
 
-FutureUpdateTab:NewLabel("Egg hub game menu launcher :O")
-
-local FutureMenus = Window:NewTab("Future Menus")
-local FutureMenusTab = FutureMenus:NewSection("Future Menus")
-
-FutureMenusTab:NewLabel("Mad city menu")
-
-local Info = Window:NewTab("Some Info")
-local InfoSection = Info:NewSection("Info")
-
-InfoSection:NewLabel("If you have any questions here you go my Discord")
-InfoSection:NewLabel("Skeletonman#9534")
+FutureUpdateTab:NewLabel("Mad city Menu / Game Menus")
