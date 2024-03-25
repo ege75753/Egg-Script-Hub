@@ -36,6 +36,7 @@ Section:NewSlider("Jump Power", ",Changes Your Jump Power", 500, 0, function(s) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
+
 Section:NewButton("Noclip", "Noclips dont have a undo command", function()
     local StealthMode = true -- If game has an anticheat that checks the logs
 
@@ -859,6 +860,14 @@ dwRunService.Heartbeat:Connect(function()
     end
 
 end)
+end)
+
+ScriptsSection:NewButton("jxyserr OP fling", "real good fling fr", function()
+    -- Official Showcase: https://www.youtube.com/watch?v=0y_B36wcoqw
+
+    _G.JXYSERR_MOBILE_TOGGLE_BUTTON = false; -- You should probably only enable this if you're on mobile and don't have a mouse and keyboard.
+
+    loadstring(game:HttpGet('https://pastes.io/raw/ku3dipdojr'))();
 end)
 
 ScriptsSection:NewButton("Ultimate Fling", "R15 R6 Best", function()
@@ -3082,18 +3091,22 @@ NewFeaturesTab:NewLabel("so quick talk the library that i use")
 NewFeaturesTab:NewLabel("doesnt let me create one other tab")
 NewFeaturesTab:NewLabel("so new features goes to here")
 
+NewFeaturesTab:NewButton("Chat bypass", "bypasses chat", function()
+    loadstring(game:HttpGet('https://pastes.io/raw/lstrrfipqq'))();
+end)
+
 local UpdateLog = Window:NewTab("Update Logs")
 local UpdateLogTab = UpdateLog:NewSection("Update logs")
 
 UpdateLogTab:NewLabel("Backdoor added (op)")
 UpdateLogTab:NewLabel("Added hitbox")
-UpdateLogTab:NewLabel("Added AutoClicker")
-UpdateLogTab:NewLabel("Added Super Human")
 UpdateLogTab:NewLabel("Added Aimbot :O")
 UpdateLogTab:NewLabel("Added Esp :O")
 UpdateLogTab:NewLabel("Keybind to close the menu")
 UpdateLogTab:NewLabel("Added Player Interact")
 UpdateLogTab:NewLabel("Added crash (op)")
+UpdateLogTab:NewLabel("New Fling script (really op)")
+UpdateLogTab:NewLabel("chatbypass script really epic")
 UpdateLogTab:NewLabel("----------------------------------------")
 
 local QuickUpdateLog = UpdateLog:NewSection("Quick Updates")
