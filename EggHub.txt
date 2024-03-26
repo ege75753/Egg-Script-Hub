@@ -291,6 +291,10 @@ ScriptsSection:NewButton("Galetek hub", "Best reanimate", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/toldblock/GelatekHub/main/Main.lua"))()
 end)
 
+ScriptsSection:NewButton("Universal FE hub", "Epic", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalFEScriptHub/main/Script'))()
+end)
+
 ScriptsSection:NewButton("FE Car script", "Look at the scripts source for the hats", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/MonkoTubeYT/carscript/master/!carscript.lua',true))()
 end)
