@@ -318,8 +318,92 @@ end)
 local Hitbox = Window:NewTab("Hitbox")
 local HitboxTab = Hitbox:NewSection("Hitbox")
 
-HitboxTab:NewButton("Hitbox", "Enables Hitbox", function()
+HitboxTab:NewButton("Hitbox 6", "Enables Hitbox", function()
+	_G.HeadSize = 6
+	_G.Disabled = true
+
+	game:GetService('RunService').RenderStepped:connect(function()
+	if _G.Disabled then
+	for i,v in next, game:GetService('Players'):GetPlayers() do
+	if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+	pcall(function()
+	v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+	v.Character.HumanoidRootPart.Transparency = 0.5
+	v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really White")
+	v.Character.HumanoidRootPart.Material = "Glass"
+	v.Character.HumanoidRootPart.CanCollide = false
+	end)
+	end
+	end
+	end
+	end)
+end)
+
+HitboxTab:NewButton("Hitbox 7", "Enables Hitbox", function()
 	_G.HeadSize = 7
+	_G.Disabled = true
+
+	game:GetService('RunService').RenderStepped:connect(function()
+	if _G.Disabled then
+	for i,v in next, game:GetService('Players'):GetPlayers() do
+	if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+	pcall(function()
+	v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+	v.Character.HumanoidRootPart.Transparency = 0.5
+	v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really White")
+	v.Character.HumanoidRootPart.Material = "Glass"
+	v.Character.HumanoidRootPart.CanCollide = false
+	end)
+	end
+	end
+	end
+	end)
+end)
+
+HitboxTab:NewButton("Hitbox 8", "Enables Hitbox", function()
+	_G.HeadSize = 8
+	_G.Disabled = true
+
+	game:GetService('RunService').RenderStepped:connect(function()
+	if _G.Disabled then
+	for i,v in next, game:GetService('Players'):GetPlayers() do
+	if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+	pcall(function()
+	v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+	v.Character.HumanoidRootPart.Transparency = 0.5
+	v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really White")
+	v.Character.HumanoidRootPart.Material = "Glass"
+	v.Character.HumanoidRootPart.CanCollide = false
+	end)
+	end
+	end
+	end
+	end)
+end)
+
+HitboxTab:NewButton("Hitbox 9", "Enables Hitbox", function()
+	_G.HeadSize = 9
+	_G.Disabled = true
+
+	game:GetService('RunService').RenderStepped:connect(function()
+	if _G.Disabled then
+	for i,v in next, game:GetService('Players'):GetPlayers() do
+	if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+	pcall(function()
+	v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+	v.Character.HumanoidRootPart.Transparency = 0.5
+	v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really White")
+	v.Character.HumanoidRootPart.Material = "Glass"
+	v.Character.HumanoidRootPart.CanCollide = false
+	end)
+	end
+	end
+	end
+	end)
+end)
+
+HitboxTab:NewButton("Hitbox 10", "Enables Hitbox", function()
+	_G.HeadSize = 10
 	_G.Disabled = true
 
 	game:GetService('RunService').RenderStepped:connect(function()
@@ -3126,6 +3210,7 @@ NewFeaturesTab:NewLabel("so new features goes to here")
 local UpdateLog = Window:NewTab("Update Logs")
 local UpdateLogTab = UpdateLog:NewSection("Update logs")
 
+UpdateLogTab:NewLabel("Changed hitboxes (im retarded i cant make sliders)")
 UpdateLogTab:NewLabel("New game script")
 UpdateLogTab:NewLabel("Added Fov Changer")
 UpdateLogTab:NewLabel("New Fling script (stopped working on the same day)")
