@@ -3210,16 +3210,12 @@ NewFeaturesTab:NewLabel("so new features goes to here")
 local UpdateLog = Window:NewTab("Update Logs")
 local UpdateLogTab = UpdateLog:NewSection("Update logs")
 
+UpdateLogTab:NewLabel("New 2 games")
 UpdateLogTab:NewLabel("Changed hitboxes (im retarded i cant make sliders)")
-UpdateLogTab:NewLabel("New game script")
 UpdateLogTab:NewLabel("Added Fov Changer")
-UpdateLogTab:NewLabel("New Fling script (stopped working on the same day)")
-UpdateLogTab:NewLabel("chatbypass script really epic")
 UpdateLogTab:NewLabel("----------------------------------------")
 
 local QuickUpdateLog = UpdateLog:NewSection("Quick Updates")
-
-QuickUpdateLog:NewLabel("Fixed some label issues")
 
 local FutureUpdate = Window:NewTab("Game Menus")
 local FutureUpdateTab = FutureUpdate:NewSection("Game Menus")
@@ -3230,4 +3226,12 @@ end)
 
 FutureUpdateTab:NewButton("School Rp V3", "weird ass game ong", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/nlfes/School-Rp-v3-script/main/balls"))()
+end)
+
+FutureUpdateTab:NewButton("FRONTLINE", "realistic game", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SomacYT/better-script-frontline/main/Frontline%20somac%20hub%20v2"))()
+end)
+
+FutureUpdateTab:NewButton("Breaking Point", "Why do i even write these?", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/H4R7NHacks/Obfuscated/master/Breaking%20Point%20H4R7N%20Hack.lua"))()
 end)
